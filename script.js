@@ -39,42 +39,64 @@ chips.forEach((chip) => {
   });
 });
 
-// Contact form (Formspree, submitted without leaving the page)
+// Contact form -> Google Sheet + email alert (Google Apps Script web app)
+// Paste your Web app URL here (see apps-script/README.md):
+const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzj4KBQbDS5Lo_S1EPUdy63BAajGnOGhapcxbwVkSj8gdxOPBFMrjugE82wOp6MApxB/exec';
+
 const form = document.getElementById('contact-form');
 const statusEl = document.getElementById('form-status');
 const submitBtn = document.getElementById('submit-btn');
+const defaultStatus = statusEl.textContent;
+
+function setStatus(text, tone) {
+  statusEl.textContent = text;
+  statusEl.style.color = tone === 'error' ? '#B8341C' : tone === 'success' ? '#1F7A4D' : '';
+}
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  if (form.action.includes('YOUR_FORM_ID')) {
-    statusEl.textContent = 'Form not connected yet: add your Formspree ID in index.html.';
-    statusEl.style.color = '#B8341C';
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
+  if (!FORM_ENDPOINT.startsWith('https://script.google.com/')) {
+    setStatus('Form not connected yet: add your Google Apps Script URL in script.js.', 'error');
     return;
   }
 
+  syncServices();
   submitBtn.disabled = true;
-  statusEl.textContent = 'Sending…';
-  statusEl.style.color = '';
+  setStatus('Sending…');
 
   try {
-    const res = await fetch(form.action, {
+    // URL-encoded body keeps this a "simple" request, so the browser
+    // doesn't need extra permission (CORS preflight) from Google.
+    const res = await fetch(FORM_ENDPOINT, {
       method: 'POST',
-      body: new FormData(form),
-      headers: { Accept: 'application/json' }
+      body: new URLSearchParams(new FormData(form))
     });
-    if (!res.ok) throw new Error('Request failed');
+    const data = await res.json();
+    if (!data.ok) throw new Error(data.error || 'Request failed');
+
     form.reset();
     chips.forEach((c) => c.setAttribute('aria-pressed', 'false'));
     syncServices();
-    statusEl.textContent = 'Message sent. We\u2019ll reply within 24 hours.';
-    statusEl.style.color = '#1F7A4D';
+    setStatus('Message sent. We\u2019ll reply within 24 hours.', 'success');
   } catch (err) {
-    statusEl.textContent = 'Message not sent. Check your connection and try again, or email udit.thapa@socialarrow.media.';
-    statusEl.style.color = '#B8341C';
+    setStatus(
+      err.message && err.message !== 'Request failed' && !err.message.startsWith('Failed')
+        ? err.message
+        : 'Message not sent. Try again, or email udit.thapa@socialarrow.media.',
+      'error'
+    );
   } finally {
     submitBtn.disabled = false;
   }
+});
+
+form.addEventListener('input', () => {
+  if (statusEl.style.color === 'rgb(184, 52, 28)') setStatus(defaultStatus);
 });
 
 // Footer year

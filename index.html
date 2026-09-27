@@ -420,13 +420,17 @@
               @socialarrowmedia</a></li>
             <li class="contact-row border-b-0">
               <svg class="h-[22px] w-[22px] shrink-0 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-              <span class="leading-snug">Radha Sky Garden, Sector 16B,<br>Greater Noida, Delhi NCR</span></li>
+              <span class="leading-snug">AFF-110, Gaur World SmartStreet,<br>Sector 16B Road, Sector 16B,<br>Greater Noida West, Gautam Buddh Nagar,<br>Uttar Pradesh – 201318</span></li>
           </ul>
         </div>
 
-        <!-- Form: replace YOUR_FORM_ID with your Formspree form id (see README) -->
-        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
+        <!-- Form: submissions go to a Google Sheet (see FORM_ENDPOINT in script.js) -->
+        <form id="contact-form" novalidate
           class="m-2 flex flex-col gap-5 rounded-[24px] bg-paper p-5 md:rounded-[30px] md:p-10 lg:p-14">
+          <!-- Spam trap: hidden from people, bots fill it in -->
+          <div class="hp-field" aria-hidden="true">
+            <label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
           <div class="grid gap-4 sm:grid-cols-2">
             <label class="field-label">Your name<input name="name" type="text" required autocomplete="name" placeholder="Priya Mehta" class="field"></label>
             <label class="field-label">Email<input name="email" type="email" required autocomplete="email" placeholder="priya@brand.in" class="field"></label>
@@ -490,7 +494,7 @@
       </div>
       <div class="flex flex-col gap-2 border-t border-line pt-6 text-sm text-muted sm:flex-row sm:justify-between">
         <span>© <span id="year">2026</span> Social Arrow Media. All rights reserved.</span>
-        <span>Delhi NCR, India</span>
+        <span>Greater Noida West, Uttar Pradesh, India</span>
       </div>
     </div>
   </footer>
