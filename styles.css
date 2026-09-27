@@ -205,7 +205,7 @@
   color: var(--paper);
   border-bottom: 1px solid #2E2C25;
 }
-a.contact-row:hover { color: var(--accent); }
+a.contact-row:not(.contact-row--address):hover { color: var(--accent); }
 
 .field-label {
   display: flex;
@@ -300,3 +300,17 @@ a.contact-row:hover { color: var(--accent); }
   line-height: 1.2;
 }
 @media (min-width: 1024px) { .photo-caption { left: 14px; bottom: 14px; font-size: 13px; } }
+
+/* Spam trap field: kept off-screen, not display:none, so bots still fill it */
+.hp-field { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+
+/* Address row: multi-line, so align to the top and use a calmer size */
+.contact-row--address {
+  align-items: flex-start;
+  padding: 14px 0 6px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.contact-row--address address { min-width: 0; overflow-wrap: anywhere; }
+.contact-row--address:hover .text-accent { text-decoration: underline; }
