@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Social Arrow — Social media marketing agency</title>
+  <meta name="description" content="Social Arrow is a social media marketing agency. Strategy, content, community and paid ads under one roof.">
+  <meta property="og:title" content="Social Arrow — Social media marketing agency">
+  <meta property="og:description" content="We make brands impossible to scroll past.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
+
+  <!-- Tailwind (Play CDN) + theme -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#F5F2EC',
+            ink: '#15140F',
+            muted: '#5B584F',
+            line: '#DDD8CC',
+            field: '#CFC8B8',
+            sand: '#EAE5DA',
+            stone: '#D8D1C2',
+            accent: '#E4472A',
+            'accent-dark': '#B8341C',
+            night: '#2A2822',
+            'night-line': '#4A473E',
+            dim: '#A8A395'
+          },
+          fontFamily: {
+            display: ['"Bricolage Grotesque"', '"DM Sans"', 'sans-serif'],
+            sans: ['"DM Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-paper font-sans text-ink antialiased">
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 border-b border-line bg-paper/90 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-10 lg:py-6">
+      <a href="#top" class="flex items-center gap-2.5 font-display text-xl font-extrabold tracking-tight lg:text-2xl">
+        <svg class="h-7 w-7 lg:h-8 lg:w-8" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#15140F"/><path d="M9 23 L23 9 M13 9 H23 V19" stroke="#E4472A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Social Arrow
+      </a>
+
+      <nav aria-label="Primary" class="hidden items-center gap-9 font-medium lg:flex">
+        <a href="#work" class="hover:text-accent-dark">Work</a>
+        <a href="#services" class="hover:text-accent-dark">Services</a>
+        <a href="#process" class="hover:text-accent-dark">Process</a>
+        <a href="#about" class="hover:text-accent-dark">About</a>
+        <a href="#faq" class="hover:text-accent-dark">FAQ</a>
+      </nav>
+
+      <a href="#contact" class="hidden min-h-[48px] items-center gap-2 rounded-full bg-ink px-6 font-semibold text-paper hover:bg-black lg:inline-flex">
+        Contact us
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+      </a>
+
+      <button id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"
+        class="flex h-12 w-12 items-center justify-center rounded-full border border-field bg-white lg:hidden">
+        <svg id="menu-open-icon" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+        <svg id="menu-close-icon" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <nav id="mobile-menu" aria-label="Mobile" class="hidden border-t border-line px-5 pb-6 lg:hidden">
+      <div class="flex flex-col font-display text-2xl font-bold">
+        <a href="#work" class="border-b border-line py-4">Work</a>
+        <a href="#services" class="border-b border-line py-4">Services</a>
+        <a href="#process" class="border-b border-line py-4">Process</a>
+        <a href="#about" class="border-b border-line py-4">About</a>
+        <a href="#faq" class="border-b border-line py-4">FAQ</a>
+      </div>
+      <a href="#contact" class="mt-6 flex min-h-[56px] items-center justify-center rounded-full bg-ink font-semibold text-paper">Contact us</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-12 pt-10 md:px-10 lg:grid-cols-2 lg:pb-24 lg:pt-24">
+      <div class="flex flex-col gap-6 lg:gap-8">
+        <div class="inline-flex items-center gap-2.5 self-start rounded-full border border-line px-4 py-2 text-sm font-semibold text-muted">
+          <span class="h-2 w-2 rounded-full bg-accent"></span>
+          Social media marketing agency in [City]
+        </div>
+        <h1 class="font-display text-[50px] font-extrabold leading-[0.96] tracking-[-0.035em] sm:text-7xl lg:text-[88px]">
+          We make brands impossible to <span class="text-accent">scroll past.</span>
+        </h1>
+        <p class="max-w-lg text-lg leading-relaxed text-muted lg:text-xl">
+          Strategy, content, community and paid ads under one roof. We build audiences that turn into customers.
+        </p>
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-7">
+          <a href="#contact" class="inline-flex min-h-[56px] items-center justify-center gap-2.5 rounded-full bg-ink px-8 text-lg font-semibold text-paper hover:bg-black lg:min-h-[60px]">
+            Book a free strategy call
+            <svg class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+          <a href="#work" class="inline-flex min-h-[56px] items-center justify-center rounded-full border border-ink px-8 text-lg font-semibold sm:min-h-0 sm:rounded-none sm:border-0 sm:border-b-2 sm:px-0 sm:pb-0.5">See our work</a>
+        </div>
+        <div class="grid grid-cols-3 gap-4 border-t border-line pt-6 sm:flex sm:gap-10">
+          <div><div class="font-display text-2xl font-bold sm:text-4xl">[50+]</div><div class="text-sm text-muted">brands grown</div></div>
+          <div><div class="font-display text-2xl font-bold sm:text-4xl">[10M+]</div><div class="text-sm text-muted">impressions a month</div></div>
+          <div><div class="font-display text-2xl font-bold sm:text-4xl">24 hrs</div><div class="text-sm text-muted">reply time</div></div>
+        </div>
+      </div>
+
+      <!-- Hero collage -->
+      <div class="relative mx-auto h-[340px] w-full max-w-[400px] sm:h-[520px] sm:max-w-[560px] lg:h-[620px]">
+        <div class="absolute left-2 top-3 h-[310px] w-[180px] -rotate-[4deg] rounded-[26px] bg-ink p-2.5 shadow-2xl sm:left-10 sm:top-5 sm:h-[500px] sm:w-[280px] sm:rounded-[32px] sm:p-3">
+          <!-- Replace this block with <video> or <img> of a real client reel -->
+          <div class="flex h-full w-full flex-col justify-between rounded-[18px] bg-accent p-4 text-white sm:rounded-[22px] sm:p-6">
+            <div class="flex justify-between text-xs font-semibold sm:text-sm"><span>Reel</span><span>[Client reel]</span></div>
+            <div class="flex h-14 w-14 items-center justify-center self-center rounded-full bg-white/25 sm:h-20 sm:w-20">
+              <svg class="h-6 w-6 sm:h-8 sm:w-8" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="font-display text-lg font-bold leading-tight sm:text-[26px]">Your campaign video here</div>
+          </div>
+        </div>
+
+        <div class="absolute right-0 top-14 flex w-[210px] flex-col gap-1.5 rounded-[20px] border border-line bg-white p-4 shadow-xl sm:top-20 sm:w-[300px] sm:gap-2.5 sm:rounded-3xl sm:p-6">
+          <div class="flex justify-between text-xs font-semibold text-muted sm:text-sm"><span>FitBrand Co.</span><span>Instagram</span></div>
+          <div class="font-display text-4xl font-extrabold leading-none tracking-tight sm:text-[54px]">2K → 150K</div>
+          <div class="text-sm text-muted sm:text-[15px]">followers in 4 months</div>
+          <svg class="h-10 w-full sm:h-16" viewBox="0 0 248 64" fill="none" preserveAspectRatio="none" aria-hidden="true"><path d="M2 60 C 40 58, 70 54, 100 46 S 160 30, 190 18 S 230 6, 246 3" stroke="#E4472A" stroke-width="3.5" stroke-linecap="round"/></svg>
+        </div>
+
+        <div class="absolute bottom-8 right-8 hidden w-[330px] items-start gap-3.5 rounded-[22px] border border-line bg-white p-5 shadow-xl sm:flex">
+          <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-ink text-[15px] font-bold text-paper">JL</div>
+          <div>
+            <div class="text-sm font-bold">Jordan Lee <span class="font-medium text-muted">, CEO of FitBrand Co.</span></div>
+            <div class="mt-1 text-[15px] leading-snug">Our DMs are now flooded with leads every single day.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENT STRIP -->
+    <section aria-label="Clients" class="border-y border-line">
+      <div class="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-7 md:px-10 lg:flex-row lg:items-center lg:gap-14 lg:py-9">
+        <div class="shrink-0 text-sm font-semibold text-muted">Brands we've grown</div>
+        <div class="grid flex-grow grid-cols-3 gap-x-3 gap-y-4 font-display text-base font-bold text-[#3A3830] sm:text-lg lg:flex lg:justify-between lg:text-[22px]">
+          <span>FitBrand Co.</span><span class="italic">GlowUp</span><span>TravelNest</span><span>Mitchell &amp; Co.</span><span class="tracking-wider">BEATBOX</span><span>FreshBite</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="scroll-mt-24 mx-auto max-w-7xl px-5 py-16 md:px-10 lg:py-28">
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
+        <div>
+          <p class="text-sm font-bold text-accent-dark">What we do</p>
+          <h2 class="mt-3 max-w-2xl font-display text-[38px] font-extrabold leading-none tracking-[-0.03em] lg:text-6xl">Everything your socials need, done for you.</h2>
+        </div>
+        <p class="max-w-md text-base leading-relaxed text-muted lg:text-lg">Pick one service or hand us the whole thing. Every plan comes with a dedicated account manager.</p>
+      </div>
+
+      <div class="mt-8 grid border-t border-ink sm:grid-cols-2 lg:mt-14 lg:grid-cols-3">
+        <!-- Card -->
+        <article class="service-card">
+          <div class="flex items-center justify-between">
+            <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>
+          </div>
+          <h3 class="font-display text-2xl font-bold tracking-tight lg:text-[28px]">Strategy &amp; growth</h3>
+          <p class="leading-relaxed text-muted">A plan built around your goals, audience and industry, not a template.</p>
+          <div class="flex flex-wrap gap-2"><span class="tag">Content calendar</span><span class="tag">Competitor audits</span></div>
+        </article>
+        <article class="service-card">
+          <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m10 9 5 3-5 3z"/></svg>
+          <h3 class="font-display text-2xl font-bold tracking-tight lg:text-[28px]">Content creation</h3>
+          <p class="leading-relaxed text-muted">Scroll-stopping reels, carousels and stories: shot, designed, written and scheduled.</p>
+          <div class="flex flex-wrap gap-2"><span class="tag">Video production</span><span class="tag">Creative design</span></div>
+        </article>
+        <article class="service-card">
+          <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>
+          <h3 class="font-display text-2xl font-bold tracking-tight lg:text-[28px]">Community management</h3>
+          <p class="leading-relaxed text-muted">Daily replies to comments and DMs, so your audience feels heard and keeps coming back.</p>
+          <div class="flex flex-wrap gap-2"><span class="tag">DM &amp; comment care</span></div>
+        </article>
+        <article class="service-card">
+          <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17 9 11l4 4 8-8"/><path d="M15 7h6v6"/></svg>
+          <h3 class="font-display text-2xl font-bold tracking-tight lg:text-[28px]">Paid advertising</h3>
+          <p class="leading-relaxed text-muted">Performance campaigns: setup, targeting, testing and budget management.</p>
+          <div class="flex flex-wrap gap-2"><span class="tag">Meta</span><span class="tag">TikTok</span><span class="tag">Google</span></div>
+        </article>
+        <article class="service-card">
+          <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18.5 20a6.5 6.5 0 0 0-3-5.5"/></svg>
+          <h3 class="font-display text-2xl font-bold tracking-tight lg:text-[28px]">Influencer partnerships</h3>
+          <p class="leading-relaxed text-muted">We match you with creators your audience already trusts and run the collaboration end to end.</p>
+          <div class="flex flex-wrap gap-2"><span class="tag">Creator matching</span><span class="tag">UGC</span></div>
+        </article>
+        <article class="service-card">
+          <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+          <h3 class="font-display text-2xl font-bold tracking-tight lg:text-[28px]">Analytics &amp; reporting</h3>
+          <p class="leading-relaxed text-muted">A clear monthly report: what worked, what didn't, and where to double down next.</p>
+          <div class="flex flex-wrap gap-2"><span class="tag">Monthly reports</span><span class="tag">Dedicated manager</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="scroll-mt-20 bg-ink text-paper">
+      <div class="mx-auto max-w-7xl px-5 py-16 md:px-10 lg:py-28">
+        <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
+          <div>
+            <p class="text-sm font-bold text-accent">Selected work</p>
+            <h2 class="mt-3 max-w-2xl font-display text-[38px] font-extrabold leading-none tracking-[-0.03em] lg:text-6xl">Results you can put a number on.</h2>
+          </div>
+          <p class="max-w-sm text-base leading-relaxed text-dim lg:text-lg">Three recent campaigns. Ask us for the full case study on any of them.</p>
+        </div>
+
+        <div class="mt-10 grid gap-12 md:grid-cols-3 md:gap-7 lg:mt-14">
+          <article class="flex flex-col gap-5">
+            <!-- Replace with <img src="assets/fitbrand.jpg" alt="..." class="h-56 w-full rounded-3xl object-cover lg:h-[340px]"> -->
+            <div class="placeholder-dark">[FitBrand campaign visual]</div>
+            <div class="flex gap-2"><span class="tag-dark">Instagram</span><span class="tag-dark">Fitness</span></div>
+            <div class="font-display text-[42px] font-extrabold leading-none tracking-tight text-accent lg:text-[56px]">2K → 150K</div>
+            <div><h3 class="text-xl font-bold">FitBrand Co.</h3><p class="mt-1.5 leading-relaxed text-dim">Followers in four months, with daily inbound leads through DMs.</p></div>
+          </article>
+          <article class="flex flex-col gap-5">
+            <div class="placeholder-dark">[BeatBox campaign visual]</div>
+            <div class="flex gap-2"><span class="tag-dark">TikTok</span><span class="tag-dark">Music</span></div>
+            <div class="font-display text-[42px] font-extrabold leading-none tracking-tight text-accent lg:text-[56px]">500K/mo</div>
+            <div><h3 class="text-xl font-bold">BeatBox Studios</h3><p class="mt-1.5 leading-relaxed text-dim">Monthly views on an account that was close to dormant.</p></div>
+          </article>
+          <article class="flex flex-col gap-5">
+            <div class="placeholder-dark">[TravelNest campaign visual]</div>
+            <div class="flex gap-2"><span class="tag-dark">Meta Ads</span><span class="tag-dark">Travel</span></div>
+            <div class="font-display text-[42px] font-extrabold leading-none tracking-tight text-accent lg:text-[56px]">5× ROAS</div>
+            <div><h3 class="text-xl font-bold">TravelNest</h3><p class="mt-1.5 leading-relaxed text-dim">Return on ad spend after we rebuilt their campaign structure.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="scroll-mt-24 mx-auto max-w-7xl px-5 py-16 md:px-10 lg:py-28">
+      <p class="text-sm font-bold text-accent-dark">How we work</p>
+      <h2 class="mt-3 font-display text-[38px] font-extrabold leading-none tracking-[-0.03em] lg:text-6xl">From first call to first results.</h2>
+      <ol class="mt-8 grid gap-4 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4 lg:gap-6">
+        <li class="step-card bg-white">
+          <span class="step-num">1</span>
+          <div><h3 class="font-display text-xl font-bold lg:text-2xl">Free discovery call</h3><p class="mt-1.5 leading-relaxed text-muted">30 minutes on your brand, goals and what's worked so far.</p></div>
+        </li>
+        <li class="step-card bg-white">
+          <span class="step-num">2</span>
+          <div><h3 class="font-display text-xl font-bold lg:text-2xl">Audit &amp; strategy</h3><p class="mt-1.5 leading-relaxed text-muted">We audit your accounts and competitors, then hand you a 90-day plan.</p></div>
+        </li>
+        <li class="step-card bg-white">
+          <span class="step-num">3</span>
+          <div><h3 class="font-display text-xl font-bold lg:text-2xl">Create &amp; launch</h3><p class="mt-1.5 leading-relaxed text-muted">Content, community and ads go live on a calendar you approve.</p></div>
+        </li>
+        <li class="step-card border-accent bg-accent">
+          <span class="step-num">4</span>
+          <div><h3 class="font-display text-xl font-bold lg:text-2xl">Report &amp; scale</h3><p class="mt-1.5 leading-relaxed">Monthly reviews. We cut what doesn't work and scale what does.</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="mx-auto max-w-7xl px-5 pb-16 md:px-10 lg:pb-28">
+      <h2 class="font-display text-[38px] font-extrabold leading-none tracking-[-0.03em] lg:text-6xl">In our clients' words.</h2>
+      <div class="mt-8 grid gap-5 md:grid-cols-3 lg:mt-14 lg:gap-7">
+        <figure class="quote-card">
+          <blockquote class="font-display text-xl font-semibold leading-snug lg:text-2xl">“Their content strategy completely transformed our brand. Engagement tripled and our sales followed.”</blockquote>
+          <figcaption class="flex items-center gap-3.5"><span class="avatar">PS</span><span><span class="block font-bold">Priya Sharma</span><span class="text-sm text-muted">Founder, GlowUp Skincare</span></span></figcaption>
+        </figure>
+        <figure class="quote-card">
+          <blockquote class="font-display text-xl font-semibold leading-snug lg:text-2xl">“They don't just post content, they understand our brand deeply. It's like having a full marketing team on call.”</blockquote>
+          <figcaption class="flex items-center gap-3.5"><span class="avatar">SM</span><span><span class="block font-bold">Sarah Mitchell</span><span class="text-sm text-muted">Owner, Mitchell &amp; Co.</span></span></figcaption>
+        </figure>
+        <figure class="quote-card">
+          <blockquote class="font-display text-xl font-semibold leading-snug lg:text-2xl">“The monthly reports alone are worth it. We always know exactly what's working and where to double down.”</blockquote>
+          <figcaption class="flex items-center gap-3.5"><span class="avatar">ER</span><span><span class="block font-bold">Emma Rodriguez</span><span class="text-sm text-muted">CMO, FreshBite Foods</span></span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="scroll-mt-20 bg-sand">
+      <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 md:px-10 lg:grid-cols-2 lg:gap-20 lg:py-28">
+        <div class="flex flex-col gap-5 lg:gap-6">
+          <p class="text-sm font-bold text-accent-dark">About us</p>
+          <h2 class="font-display text-[38px] font-extrabold leading-none tracking-[-0.03em] lg:text-6xl">A small team with senior hands on every account.</h2>
+          <p class="text-base leading-relaxed text-[#3A3830] lg:text-lg">[Two or three sentences on who founded Social Arrow, when, and why. Real people build trust faster than any stat.]</p>
+          <ul class="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <li class="check-pill"><svg class="h-4 w-4 text-accent-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>No lock-in contracts</li>
+            <li class="check-pill"><svg class="h-4 w-4 text-accent-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>One point of contact</li>
+            <li class="check-pill"><svg class="h-4 w-4 text-accent-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Reports every month</li>
+          </ul>
+        </div>
+        <div class="grid grid-cols-3 gap-3 lg:gap-5">
+          <!-- Replace each .photo div with <img src="assets/team-1.jpg" alt="Name" class="photo object-cover"> -->
+          <div><div class="photo">[Photo]</div><p class="mt-3 font-bold">[Name]</p><p class="text-sm text-muted">Founder, strategy</p></div>
+          <div class="lg:pt-12"><div class="photo">[Photo]</div><p class="mt-3 font-bold">[Name]</p><p class="text-sm text-muted">Creative lead</p></div>
+          <div><div class="photo">[Photo]</div><p class="mt-3 font-bold">[Name]</p><p class="text-sm text-muted">Paid media</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="scroll-mt-24 mx-auto grid max-w-7xl gap-8 px-5 py-16 md:px-10 lg:grid-cols-[380px_1fr] lg:gap-24 lg:py-28">
+      <div>
+        <p class="text-sm font-bold text-accent-dark">FAQ</p>
+        <h2 class="mt-3 font-display text-[38px] font-extrabold leading-none tracking-[-0.03em] lg:text-6xl">Good questions.</h2>
+        <p class="mt-5 text-base leading-relaxed text-muted lg:text-lg">Something else on your mind? <a href="#contact" class="border-b-2 border-ink font-bold">Ask us directly.</a></p>
+      </div>
+      <div class="border-t border-ink" id="faq-list">
+        <details class="faq group" open>
+          <summary>How soon will we see results?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <p>Most clients see engagement move within the first [4–6] weeks. Follower and revenue growth compounds from around month [3].</p>
+        </details>
+        <details class="faq group">
+          <summary>Do you work with small businesses?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <p>Yes. Many of our clients are founder-led brands. We scope a plan to your budget rather than a one-size package.</p>
+        </details>
+        <details class="faq group">
+          <summary>Which platforms do you manage?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <p>Instagram, TikTok, LinkedIn, X and YouTube Shorts, plus paid campaigns on Meta, TikTok and Google.</p>
+        </details>
+        <details class="faq group">
+          <summary>Do we need to provide content?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <p>No. We can plan, shoot, design and write everything. If you have an in-house team, we happily work alongside them.</p>
+        </details>
+        <details class="faq group">
+          <summary>What makes you different?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <p>A dedicated manager, senior people on every account, and monthly reports that tie activity to results you care about.</p>
+        </details>
+        <details class="faq group">
+          <summary>Can we cancel anytime?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <p>[Your notice period, e.g. 30 days]. No long lock-in contracts.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="scroll-mt-20 md:px-10 md:pb-28">
+      <div class="mx-auto grid max-w-7xl overflow-hidden bg-ink md:rounded-[36px] lg:grid-cols-[440px_1fr]">
+        <div class="flex flex-col justify-between gap-10 px-5 pb-8 pt-14 text-paper md:px-12 lg:py-16">
+          <div>
+            <p class="text-sm font-bold text-accent">Contact us</p>
+            <h2 class="mt-3 font-display text-[42px] font-extrabold leading-none tracking-[-0.03em] lg:text-6xl">Let's grow your brand.</h2>
+            <p class="mt-5 text-base leading-relaxed text-dim lg:text-lg">Tell us about your business. We reply within 24 hours with a free strategy outline.</p>
+          </div>
+          <ul class="flex flex-col">
+            <li><a href="mailto:hello@socialarrow.com" class="contact-row">
+              <svg class="h-[22px] w-[22px] text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              hello@socialarrow.com</a></li>
+            <li><a href="https://wa.me/15551234567" target="_blank" rel="noopener" class="contact-row">
+              <svg class="h-[22px] w-[22px] text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>
+              +1 (555) 123-4567 on WhatsApp</a></li>
+            <li><a href="https://instagram.com/socialarrow" target="_blank" rel="noopener" class="contact-row">
+              <svg class="h-[22px] w-[22px] text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8"/></svg>
+              DM us @[socialarrow]</a></li>
+            <li class="contact-row border-b-0">
+              <svg class="h-[22px] w-[22px] text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+              [Your city]</li>
+          </ul>
+        </div>
+
+        <!-- Form: replace YOUR_FORM_ID with your Formspree form id (see README) -->
+        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
+          class="m-2 flex flex-col gap-5 rounded-[24px] bg-paper p-5 md:rounded-[30px] md:p-10 lg:p-14">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="field-label">Your name<input name="name" type="text" required autocomplete="name" placeholder="Jane Doe" class="field"></label>
+            <label class="field-label">Email<input name="email" type="email" required autocomplete="email" placeholder="jane@brand.com" class="field"></label>
+            <label class="field-label">Company / brand<input name="company" type="text" placeholder="Brand name" class="field"></label>
+            <label class="field-label">Monthly budget
+              <select name="budget" class="field">
+                <option value="">Select a range</option>
+                <option>$1,000 – $3,000</option>
+                <option>$3,000 – $5,000</option>
+                <option>$5,000 – $10,000</option>
+                <option>$10,000+</option>
+              </select>
+            </label>
+          </div>
+          <fieldset>
+            <legend class="mb-2.5 text-sm font-semibold">What do you need help with?</legend>
+            <div class="flex flex-wrap gap-2.5" id="chips">
+              <button type="button" class="chip" aria-pressed="false">Strategy</button>
+              <button type="button" class="chip" aria-pressed="true">Content</button>
+              <button type="button" class="chip" aria-pressed="false">Community</button>
+              <button type="button" class="chip" aria-pressed="false">Paid ads</button>
+              <button type="button" class="chip" aria-pressed="false">Influencers</button>
+              <button type="button" class="chip" aria-pressed="false">Everything</button>
+            </div>
+            <input type="hidden" name="services" id="services-input" value="Content">
+          </fieldset>
+          <label class="field-label">Tell us about your goals
+            <textarea name="message" rows="4" placeholder="Where are you today, and where do you want to be in 6 months?" class="field resize-none py-3.5"></textarea>
+          </label>
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <p id="form-status" class="text-sm text-muted" role="status">We never share your details.</p>
+            <button type="submit" id="submit-btn" class="inline-flex min-h-[56px] items-center justify-center gap-2.5 rounded-full bg-ink px-8 text-[17px] font-semibold text-paper hover:bg-black disabled:opacity-60">
+              Send message
+              <svg class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-line">
+    <div class="mx-auto flex max-w-7xl flex-col gap-8 px-5 py-10 md:px-10 lg:py-14">
+      <div class="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
+        <div>
+          <div class="flex items-center gap-2.5 font-display text-2xl font-extrabold tracking-tight">
+            <svg class="h-8 w-8" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#15140F"/><path d="M9 23 L23 9 M13 9 H23 V19" stroke="#E4472A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Social Arrow
+          </div>
+          <p class="mt-3 max-w-xs text-[15px] text-muted">Social media marketing for brands that want to grow.</p>
+        </div>
+        <nav aria-label="Footer" class="grid grid-cols-3 gap-4 text-[15px] font-semibold sm:flex sm:gap-8">
+          <a href="#work" class="hover:text-accent-dark">Work</a><a href="#services" class="hover:text-accent-dark">Services</a><a href="#process" class="hover:text-accent-dark">Process</a><a href="#about" class="hover:text-accent-dark">About</a><a href="#faq" class="hover:text-accent-dark">FAQ</a><a href="#contact" class="hover:text-accent-dark">Contact</a>
+        </nav>
+        <div class="flex gap-3">
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="social"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v6M8 7.5v.01M12 17v-6M12 13.5a2.5 2.5 0 0 1 5 0V17"/></svg></a>
+          <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok" class="social"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5M14 3c.5 2.5 2.5 4.5 5 5"/></svg></a>
+          <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X" class="social"><svg class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+        </div>
+      </div>
+      <div class="flex flex-col gap-2 border-t border-line pt-6 text-sm text-muted sm:flex-row sm:justify-between">
+        <span>© <span id="year">2026</span> Social Arrow. All rights reserved.</span>
+        <a href="#" class="hover:text-ink">[Privacy policy]</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
