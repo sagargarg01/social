@@ -23,4 +23,4 @@ GitHub Pages can't process forms, so the form posts to Formspree (free tier avai
 
 ## Things to replace
 
-Search `index.html` for `[` to find every placeholder: stats, city, team names and photos, campaign visuals, Instagram handle, cancellation terms. Also update the phone number, WhatsApp link (`wa.me/<number>`) and social profile URLs.
+Search `index.html` for `>[` or `“[` to find every remaining placeholder: brands served and cities activated counts, creator reel, campaign visuals, testimonials, team names, roles and photos.

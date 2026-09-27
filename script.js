@@ -70,7 +70,7 @@ form.addEventListener('submit', async (e) => {
     statusEl.textContent = 'Message sent. We\u2019ll reply within 24 hours.';
     statusEl.style.color = '#1F7A4D';
   } catch (err) {
-    statusEl.textContent = 'Message not sent. Check your connection and try again, or email hello@socialarrow.com.';
+    statusEl.textContent = 'Message not sent. Check your connection and try again, or email udit.thapa@socialarrow.media.';
     statusEl.style.color = '#B8341C';
   } finally {
     submitBtn.disabled = false;
