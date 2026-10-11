@@ -314,3 +314,15 @@ a.contact-row:not(.contact-row--address):hover { color: var(--accent); }
 }
 .contact-row--address address { min-width: 0; overflow-wrap: anywhere; }
 .contact-row--address:hover .text-accent { text-decoration: underline; }
+
+/* Creator-content photos: tall reel format, shown uncropped */
+.reel-photo {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  aspect-ratio: 360 / 778;
+  background: var(--stone);
+}
+.reel-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (min-width: 1024px) { .reel-photo { border-radius: 22px; } }
