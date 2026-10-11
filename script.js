@@ -101,3 +101,11 @@ form.addEventListener('input', () => {
 
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// Hero reel: don't autoplay for visitors who prefer reduced motion
+const heroReel = document.getElementById('hero-reel');
+if (heroReel && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  heroReel.removeAttribute('autoplay');
+  heroReel.pause();
+  heroReel.setAttribute('controls', '');
+}
