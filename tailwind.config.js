@@ -20,7 +20,7 @@ module.exports = {
         dim: '#A8A395'
       },
       fontFamily: {
-        display: ['"Bricolage Grotesque"', '"Noto Sans Devanagari"', '"Noto Sans Bengali"', '"Noto Sans Gujarati"', '"DM Sans"', 'sans-serif'],
+        display: ['"Bricolage Grotesque"', '"Noto Sans Devanagari"', '"Noto Sans Bengali"', '"Noto Sans Gujarati"', '"Noto Sans Telugu"', '"Noto Sans Kannada"', '"Noto Sans Malayalam"', '"Noto Sans Tamil"', '"Noto Sans Oriya"', '"Noto Sans Ol Chiki"', '"DM Sans"', 'sans-serif'],
         sans: ['"DM Sans"', '"Noto Sans Devanagari"', 'ui-sans-serif', 'system-ui', 'sans-serif']
       }
     }
