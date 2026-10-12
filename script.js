@@ -109,3 +109,18 @@ if (heroReel && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   heroReel.pause();
   heroReel.setAttribute('controls', '');
 }
+
+// Campaign videos: load and play only while on screen (saves data on mobile)
+const campaignVideos = document.querySelectorAll('.campaign-video');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (reduceMotion || !('IntersectionObserver' in window)) {
+  campaignVideos.forEach((v) => v.setAttribute('controls', ''));
+} else {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(({ target, isIntersecting }) => {
+      if (isIntersecting) target.play().catch(() => target.setAttribute('controls', ''));
+      else target.pause();
+    });
+  }, { threshold: 0.4 });
+  campaignVideos.forEach((v) => observer.observe(v));
+}
